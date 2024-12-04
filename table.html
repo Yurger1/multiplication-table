@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця множення</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Таблиця множення 10х10</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Варіант 1</th>
+                <th>21</th>
+                <th>22</th>
+                <th>23</th>
+                <th>24</th>
+                <th>25</th>
+                <th>26</th>
+                <th>27</th>
+                <th>28</th>
+                <th>29</th>
+                <th>30</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                const multiples = [25, 30, 35, 40, 45, 50, 55, 60, 65, 70];
+                const numbers = Array.from({length: 10}, (_, i) => 21 + i); // [21, 22, ..., 30]
+
+                multiples.forEach(multiplier => {
+                    document.write("<tr>");
+                    document.write(`<td>${multiplier}</td>`);
+                    numbers.forEach(num => {
+                        document.write(`<td>${multiplier * num}</td>`);
+                    });
+                    document.write("</tr>");
+                });
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>
